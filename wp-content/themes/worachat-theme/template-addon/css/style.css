@@ -1,0 +1,91 @@
+body a:hover {
+  text-decoration: none;
+}
+header{
+  position: relative;
+  z-index: 1;
+}
+.main-navigation a{
+  margin: 0 5px;
+}
+.main-navigation li{
+  float: none;
+  display: inline-block;
+}
+.link_page{
+  padding: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: black;
+  font-size: 1.05em;
+  letter-spacing: .05em;
+}
+ul.menu{
+  text-align: center;
+}
+.slide-banner{
+  background-image: url(../images/banner-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - 150px);
+  margin-bottom: 20px;
+  margin-top: -190px;
+  overflow: hidden;
+  position: relative;
+}
+.link_page{
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2), 1px 1px 10px rgba(0, 0, 0, 0.14), 1px 1px 10px rgba(0, 0, 0, 0.12);
+}
+.firefly1{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 200%;
+  height: 100%;
+  background-image: url(../images/firefly.png);
+  background-position: 100% 50%;
+  background-size: contain;
+  opacity: 0.7;
+
+  -webkit-animation-name: firefly1-linear; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 50s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+  animation-name: firefly1-linear;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+.firefly2{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  height: 200%;
+  background-image: url(../images/firefly.png);
+  background-position: 50% 50%;
+  background-size: contain;
+  opacity: 0.7;
+
+
+  -webkit-animation-name: firefly2-linear; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 50s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-timing-function: linear; /* Safari 4.0 - 8.0 */
+  animation-name: firefly2-linear;
+  animation-duration: 51s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes firefly1-linear {
+    from {transform: translateX(-50%) translateY(0px);}
+    to {transform: translateX(0%) translateY(0px);}
+}
+
+@keyframes firefly2-linear {
+    from {transform: translateX(0%) translateY(-330px);}
+    to {transform: translateX(0%) translateY(330px);}
+}
