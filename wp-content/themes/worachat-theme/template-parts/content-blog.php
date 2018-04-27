@@ -9,7 +9,7 @@
 
 ?>
 
-<article  id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article  id="post-<?php the_ID(); ?>" <?php post_class('col-6'); ?>>
 	<?php worachat_theme_post_thumbnail(); ?>
 	<header class="entry-header">
 		<?php

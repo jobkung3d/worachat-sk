@@ -1,3 +1,8 @@
+@media (min-width: 1200px){
+  .site-main .container {
+      max-width: 1425px;
+  }
+}
 body a:hover {
   text-decoration: none;
 }
@@ -88,4 +93,19 @@ ul.menu{
 @keyframes firefly2-linear {
     from {transform: translateX(0%) translateY(-330px);}
     to {transform: translateX(0%) translateY(330px);}
+}
+.sidebar_wrapper{
+    padding: 30px;
+    background: #f2f2f2;
+}
+
+.widget .widget-title{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  border: 1px solid #222;
+  border-left: 0;
+  border-right: 0;
+  margin-bottom: 10px;
+  padding: 10px 10px 8px 10px;
 }

@@ -22,7 +22,7 @@ get_header();
 			</div>
 			<div class="container">
 				<div class="row">
-					<div class="col-8">
+					<div class="col-9">
 						<div class="post-hilight">
 							<?php
 							$args = array(
@@ -49,32 +49,36 @@ get_header();
 							?>
 						</div>
 						<div class="post-normal">
-							<?php
-							$args = array(
-								'post_type'  => 'post',
-								'posts_per_page'=> 10,
-								'offset'	=> 1
-							);
-							$query = new WP_Query( $args );
-							if ( $query->have_posts() ) {
-								if ( is_home() && ! is_front_page() ){
-									?>
-									<header>
-										<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-									</header>
-									<?php
+							<div class="row">
+								<?php
+								$args = array(
+									'post_type'  => 'post',
+									'posts_per_page'=> 10,
+									'offset'	=> 1
+								);
+								$query = new WP_Query( $args );
+								if ( $query->have_posts() ) {
+									if ( is_home() && ! is_front_page() ){
+										?>
+										<header>
+											<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+										</header>
+										<?php
+									};
+									while ( $query->have_posts() ) {
+										$query->the_post();
+										get_template_part( 'template-parts/content', 'blog' );
+									};
+									the_posts_navigation();
 								};
-								while ( $query->have_posts() ) {
-									$query->the_post();
-									get_template_part( 'template-parts/content', 'blog' );
-								};
-								the_posts_navigation();
-							};
-							?>
+								?>
+							</div>
 						</div>
 					</div>
-					<div class="col-4">
+					<div class="col-3">
+						<div class="sidebar_wrapper">
 						<?php get_sidebar(); ?>
+						</div>
 					</div>
 				</div>
 			</div>
